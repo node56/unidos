@@ -1,0 +1,15 @@
+  {
+    "name": "Treasurer Kit",
+    "version": "1.0",
+    "description": "Tools to help integrate accounting sites",
+    "permissions": ["declarativeContent", "storage", "activeTab"],
+    "content_scripts": [{
+       "matches": ["https://moneyminder.com/app/mm.php?Mode=Deposit&TID=new&MerchantAccountId=1638&*"],
+       "js": ["jquery-3.3.1.min.js", "squareImport.js"]
+     }, {
+       "matches": ["https://moneyminder.com/app/mm.php?Mode=Square&Action=Matches&MerchantAccountId=1638&*"],
+       "js": ["jquery-3.3.1.min.js", "importClick.js"]
+     }],
+    "manifest_version": 2
+  }
+
